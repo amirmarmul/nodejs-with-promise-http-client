@@ -21,19 +21,25 @@ const _getParametersFromRequest = function (request) {
 class Http {
   static get(request) {
     return Http._makeRequest(
-      'GET', _getParametersFromRequest(request), request.getURL()
+      "GET",
+      _getParametersFromRequest(request),
+      request.getURL()
     )
   }
 
   static post(request) {
     return Http._makeRequest(
-      'POST', _getParametersFromRequest(request), request.getURI()
+      "POST",
+      _getParametersFromRequest(request),
+      request.getURI()
     )
   }
 
   static delete(request) {
     return Http._makeRequest(
-      'DELETE', _getParametersFromRequest(request), request.getURI()
+      "DELETE",
+      _getParametersFromRequest(request),
+      request.getURI()
     )
   }
 

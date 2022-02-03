@@ -29,23 +29,23 @@ class Request {
   }
 
   getURL() {
-    let uri = this.getURI() 
-    
+    let uri = this.getURI()
+
     if (this.getQueryParameters()) {
       return uri + this.getQueryParameterString()
-    } 
+    }
 
     return uri
   }
 
   getQueryParameterString() {
     const queryParameters = this.getQueryParameters()
-    
+
     if (queryParameters) {
       return (
         "?" +
         Object.keys(queryParameters)
-          .filter(function(key) {
+          .filter(function (key) {
             return queryParameters[key] !== undefined
           })
           .map(function (key) {
@@ -61,7 +61,7 @@ class Request {
       method(this)
         .then(res => resolve(res))
         .catch(err => reject(err))
-    }) 
+    })
   }
 }
 
